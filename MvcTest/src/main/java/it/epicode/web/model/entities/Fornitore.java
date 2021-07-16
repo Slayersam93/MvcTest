@@ -13,6 +13,10 @@ public class Fornitore {
 		this.citta = citta;
 	}
 
+	public Fornitore(String codice) {
+		this.codiceFornitore = codice;
+	}
+
 	public String getCodiceFornitore() {
 		return codiceFornitore;
 	}

@@ -16,7 +16,7 @@ public class FornitoreRepository implements AbstractFornitoreRepository {
 	public static final String QUERY_FORNITORI = "SELECT codice_fornitore, nome, indirizzo, citta FROM negozio.fornitore";
 	public static final String INSERT_FORNITORE = "INSERT INTO negozio.fornitore (codice_fornitore, nome, indirizzo, citta) values (?,?,?,?)";
 	public static final String UPDATE_FORNITORE = "UPDATE negozio.fornitore SET nome = ?, indirizzo = ?, citta = ? WHERE codice_fornitore = ?";
-	public static final String DELETE_FORNITORE = "DELETE FROM negozio.fornitore WHERE id = ?";
+	public static final String DELETE_FORNITORE = "DELETE FROM negozio.fornitore WHERE codice_fornitore = ?";
 	public static final String QUERY_FORNITORE_PER_CITTA = "SELECT codice_fornitore, nome, indirizzo FROM negozio.fornitore WHERE citta = ?";
 
 	@Override
