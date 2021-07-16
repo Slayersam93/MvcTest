@@ -11,8 +11,8 @@ import it.epicode.web.model.entities.Fornitore;
 import it.epicode.web.model.entities.Prodotto;
 
 public class ProdottoRepository implements AbstractProdottoRepository {
-	public static final String QUERY_PRODOTTI_PER_FORNITORE = "SELECT forn.codiceFornitore as codforn, forn.nome as nomeforn, forn.indirizzo as indforn , forn.citta as cittaforn,  pr.codiceProdotto as codprod, pr.nome as nomeprod, pr.descrizione as descrprod, "
-			+ "pr.marca as marcaprod, pr.fornitore as fornitorefk, pr.prezzo as prezzoprod FROM negozio.prodotti pr JOIN negozio.fornitore forn ON pr.fornitore = forn.codiceFornitore WHERE fornitore = ?  ";
+	public static final String QUERY_PRODOTTI_PER_FORNITORE = "SELECT forn.codice_fornitore as codforn, forn.nome as nomeforn, forn.indirizzo as indforn , forn.citta as cittaforn,  pr.codice_prodotto as codprod, pr.nome as nomeprod, pr.descrizione as descrprod, "
+			+ "pr.marca as marcaprod, pr.fornitore as fornitorefk, pr.prezzo as prezzoprod FROM negozio.prodotti pr JOIN negozio.fornitore forn ON pr.fornitore = forn.codice_fornitore WHERE fornitore = ?  ";
 
 	@Override
 	public List<Prodotto> prodottiPerFornitore(String codiceFornitore) throws DataException {

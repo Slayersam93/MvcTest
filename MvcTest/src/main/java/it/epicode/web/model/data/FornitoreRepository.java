@@ -12,12 +12,12 @@ import it.epicode.web.model.entities.Fornitore;
 
 public class FornitoreRepository implements AbstractFornitoreRepository {
 
-	public static final String QUERY_FORNITORE_PER_ID = "SELECT codiceFornitore, nome, indirizzo, citta FROM negozio.fornitore WHERE codiceFornitore = ?";
-	public static final String QUERY_FORNITORI = "SELECT codiceFornitore, nome, indirizzo, citta FROM negozio.fornitore";
-	public static final String INSERT_FORNITORE = "INSERT INTO negozio.fornitore (codiceFornitore, nome, indirizzo, citta) values (?,?,?,?)";
-	public static final String UPDATE_FORNITORE = "UPDATE negozio.fornitore SET nome = ?, indirizzo = ?, citta = ? WHERE codiceFornitore = ?";
+	public static final String QUERY_FORNITORE_PER_ID = "SELECT codice_fornitore, nome, indirizzo, citta FROM negozio.fornitore WHERE codice_fornitore = ?";
+	public static final String QUERY_FORNITORI = "SELECT codice_fornitore, nome, indirizzo, citta FROM negozio.fornitore";
+	public static final String INSERT_FORNITORE = "INSERT INTO negozio.fornitore (codice_fornitore, nome, indirizzo, citta) values (?,?,?,?)";
+	public static final String UPDATE_FORNITORE = "UPDATE negozio.fornitore SET nome = ?, indirizzo = ?, citta = ? WHERE codice_fornitore = ?";
 	public static final String DELETE_FORNITORE = "DELETE FROM negozio.fornitore WHERE id = ?";
-	public static final String QUERY_FORNITORE_PER_CITTA = "SELECT codiceFornitore, nome, indirizzo FROM negozio.fornitore WHERE citta = ?";
+	public static final String QUERY_FORNITORE_PER_CITTA = "SELECT codice_fornitore, nome, indirizzo FROM negozio.fornitore WHERE citta = ?";
 
 	@Override
 	public Fornitore searchFornitore(String codiceFornitore) throws DataException {
@@ -114,7 +114,7 @@ public class FornitoreRepository implements AbstractFornitoreRepository {
 	}
 	
 	private Fornitore fromResultSet (ResultSet rs) throws SQLException {
-		return new Fornitore(rs.getString("codiceFornitore"), rs.getString("nome"), rs.getString("indirizzo"),
+		return new Fornitore(rs.getString("codice_fornitore"), rs.getString("nome"), rs.getString("indirizzo"),
 				rs.getString("citta"));
 	}
 
