@@ -41,6 +41,17 @@ public class ServletController extends HttpServlet {
 				des = new Destination("inserisciFornitore.jsp", false);
 			}
 			break;
+			case"mostraformupdatefornitore":{
+				FornitoreController forn = new FornitoreController(new FornitoreRepository());
+				des = forn.caricaFormUpdate(request, response);
+			}
+			break;
+			case "updatefornitore":{
+				FornitoreController forn = new FornitoreController(new FornitoreRepository());
+				des = forn.updateFornitore(request, response);
+			}
+				
+			break;
 			default:
 				des = new Destination("noAction.jsp", false);
 			}

@@ -10,7 +10,7 @@
 <body>
 <c:forEach items="${listaFornitori}" var="forn">
 		<p>${forn.codiceFornitore}  ${forn.nome} ${forn.indirizzo} ${forn.citta} 
-		 <a href="mostraFormUpdateFornitore.do?id=${forn.codiceFornitore}">modifica</a></p>
+		 <a href="mostraFormUpdateFornitore.do?id=${forn.codiceFornitore}">Modifica</a></p>
 		<br />
 	
 
